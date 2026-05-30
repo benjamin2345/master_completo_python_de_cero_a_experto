@@ -31,3 +31,39 @@ print(data_list[4])
 data = ['Benjamin', 'Avila', 'Python', 'Java', 'Angular']
 text = '/'.join(data)
 print(text)
+
+text = 'Hola, Benjamin que tal como estas?'
+print(text.find('Benjamin'))
+print(text.find('Benjamín')) # marca -1 cuando no lo encuentra
+print(text.find('tal'))
+print(text.index('como'))
+#print(text.index('coma')) #marca error cuando no lo encuentra
+
+print(text.startswith('Benjamin')) #regresa un booleano
+print(text.startswith('hola'))
+print(text.startswith('Hola,'))
+print(text.endswith('?'))
+
+number = '1234'
+decimal = '1234.45'
+text = 'Python'
+mix = 'Python2'
+
+print(number.isnumeric())
+print(number.isdigit())
+print(decimal.isdecimal())
+print(text.isalnum())
+print(mix.isalpha())
+print(text.isalpha())
+
+text = '    hola Benjamin como estas, bienvenido al curso de Python!     '
+text_clean = text.strip().capitalize()
+print(text_clean)
+text_clean = text.strip().capitalize().title()
+print(text_clean)
+
+new_text = text_clean.replace('Curso De Python', 'Curso de Python 3')
+print(new_text)
+
+words = new_text.split()
+print(words)
